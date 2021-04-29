@@ -1,0 +1,39 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Receitas",
+        "decription": "API de receitas ",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/categorias": {
+            "get": {
+                "tags": [
+                    "Categoria"
+                ],
+                "summary": "Listar todas as categorias",
+                "description": "listar todas as categorias",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "poperties": {
+                                            "nome": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
